@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+:root {
+  --body-bg: #121212;
+  --body-fc: #FFFBFC;
+  --btn-bg: #7ea8be;
+  --btn-border: #28536B;
+  --btn-br: 0.5rem;
+  --svg-fill: #000;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Creepster';
+  min-height: 100vh;
+  background-color: var(--body-bg);
+  color: var(--body-fc);
+  display: grid;
+  place-content: center;
+}
+
+.game__title {
+  font-size: 4rem;
+}
+
+.game__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 4rem;
+}
+
+.game__btn {
+  padding: 30px 35px;
+  border: none;
+  border-radius: var(--btn-br);
+  background-color: var(--btn-bg);
+  box-shadow: 0 10px var(--btn-border);
+  cursor: pointer;
+  transition: bottom 150ms ease-in-out;
+}
+
+.game__btn:active {
+  box-shadow: 0 5px var(--btn-border);
+  position: relative;
+  bottom: -5px;
+}
+
+.game__btn svg {
+  fill: var(--svg-fill);
+}
+
+.game__btn:nth-of-type(3) svg {
+  rotate: 90deg;
+}
+
+.game__results {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.game__result-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 2rem;
+}
+
+.game__result-player, .game__result-computer {
+  padding: 1.25rem;
+  background-color: var(--btn-bg);
+  border-radius: var(--btn-br);
+  border: .3rem solid var(--btn-border);
+}
+
+.game__result-message {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+.game__scoreboard {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.game__scoreboard > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .8rem;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: none;
+  place-content: center;
+  gap: 1rem;
+  text-align: center;
+  font-size: 3rem;
+  background-color: rgba(0, 0, 0, .9);
+}
+
+.overlay.show {
+  display: grid;
+}
+
+.overlay__btn {
+  padding: 1.25rem;
+  font: inherit;
+  border-radius: var(--btn-br);
+  border: 4px solid var(--btn-border);
+  background-color: var(--btn-bg);
+  color: white;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}

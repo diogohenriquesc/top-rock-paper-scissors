@@ -4,10 +4,59 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style/style.css">
   <script defer src="./script.js"></script>
   <title>Document</title>
 </head>
 <body>
-  
+  <main>
+    <section class="game__container">
+      <h1 class="game__title">ROCK, PAPER & SCISSORS</h1>
+
+      <div class="game">
+        <div class="game__controls">
+          <button class="game__btn" data-key="rock" title="rock">
+            <img src="./images/hand-rock.svg" alt="">
+          </button>
+          <button class="game__btn" data-key="paper" title="paper">
+            <img src="./images/hand-paper.svg" alt="">
+          </button>
+          <button class="game__btn" data-key="scissors" title="scissors">
+            <img src="./images/hand-scissors.svg" alt="">
+          </button>
+        </div>
+
+        <div class="game__results">
+          <div class="game__result-content">
+            <div class="game__result-player">
+              <img src="./images/question.svg" alt="">
+            </div>
+            <span>x</span>
+            <div class="game__result-computer">
+              <img src="./images/question.svg" alt="">
+            </div>
+          </div>
+          <!-- there's an empty unicode character inside the message -->
+          <p class="game__result-message">⠀</p>
+        </div>
+
+        <div class="game__scoreboard">
+          <di>
+            <h2>PLAYER</h2>
+            <p class="game__score-player">0</p>
+          </di>
+          <div>
+            <h2>MACHINE</h2>
+            <p class="game__score-computer">0</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="overlay">
+      <p class="overlay__message">YOU WON!</p>
+      <button class="overlay__btn">RESTART GAME!</button>
+    </div>
+  </main>
 </body>
 </html>
